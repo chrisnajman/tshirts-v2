@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blah blah">
+    <title>Home | T-Shirts v.2</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+    <link rel="stylesheet" href="./index.css">
+    <script src="./index.js" type="module"></script>
+</head>
+
+<body>
+    <a href="#main-content" class="element-invisible element-focusable skip-link">Skip to main content</a>
+    <div class="theme-toggler">
+        <p class="light">Light<span class="visually-hidden"> theme inactive</span></p><button type="button"
+            aria-pressed="true" aria-label="Toggle theme"><span></span></button>
+        <p class="dark">Dark<span class="visually-hidden"> theme active</span></p>
+    </div>
+    <header class="header">
+        <div class="title">
+            <p class="h1">T-Shirts v.2</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                    d="M21.316 4.055C19.556 3.478 15 1.985 15 2a3 3 0 1 1-6 0c0-.015-4.556 1.478-6.317 2.055A.992.992 0 0 0 2 5.003v3.716a1 1 0 0 0 1.242.97L6 9v12a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V9l2.758.689A1 1 0 0 0 22 8.719V5.003a.992.992 0 0 0-.684-.948z">
+                </path>
+            </svg>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="./index.html" aria-current="page">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <main class="main" id="main-content">
+        <h1>Home</h1>
+        <section class="container flow">
+            <h2>Buy a T-shirt for &pound;5</h2>
+            <div class="row">
+                <picture id="image-box">
+                    <source id="t-shirt-webp" srcset="./img/t-shirt-red.webp" type="image/webp">
+                    <img src="./img/t-shirt-red.png" alt="Red t-shirt" width="400" height="400" id="t-shirt-image"
+                        style="filter: hue-rotate(315deg) drop-shadow(0.25rem 0.5625rem 0.25rem rgb(0, 0, 0, 0.5))">
+                </picture>
+
+                <form id="order-form">
+
+                    <div>
+                        <label for="quantity">Quantity</label>
+                        <input type="number" id="quantity" name="quantity" value="1" min="1" required class="quantity">
+                    </div>
+
+                    <div>
+                        <label for="size">Size</label>
+                        <select id="size" name="size" required>
+                            <option value="XS" selected>XS</option>
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                        </select>
+                    </div>
+
+                    <fieldset id="colour-radios">
+                        <legend>Colour</legend>
+
+                        <div class="colour-radios">
+
+                            <label><input type="radio" name="colour" value="Red" checked>
+                                <span>Red</span></label>
+
+                            <label><input type="radio" name="colour" value="Brick">
+                                <span>Brick</span></label>
+
+                            <label><input type="radio" name="colour" value="Violet">
+                                <span>Violet</span></label>
+
+                            <label><input type="radio" name="colour" value="Blue">
+                                <span>Blue</span></label>
+
+                            <label><input type="radio" name="colour" value="Green">
+                                <span>Green</span></label>
+
+                            <label><input type="radio" name="colour" value="Olive">
+                                <span>Olive</span></label>
+
+
+                        </div>
+                    </fieldset>
+
+                    <div>
+                        <button type="submit" id="btn-review">Review order</button>
+                    </div>
+                </form>
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="footer">
+        <a href="https://github.com/chrisnajman/tshirts-v2" target="_blank" rel="noopener noreferrer">
+            Git Repository
+        </a>
+    </footer>
+</body>
+
+</html>
