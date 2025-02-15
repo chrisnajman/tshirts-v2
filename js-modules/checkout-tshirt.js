@@ -48,5 +48,12 @@ export default function checkoutTshirt() {
     colour.textContent = colourValue
     unitPrice.textContent = `${poundSymbol}5`
     total.textContent = poundSymbol + priceValue
+
+    /* Go back (sending params back to index.html) */
+    const backButton = document.getElementById("back-button")
+    backButton.addEventListener("click", () => {
+      const url = "index.html?" + params.toString()
+      location.href = url
+    })
   }
 }

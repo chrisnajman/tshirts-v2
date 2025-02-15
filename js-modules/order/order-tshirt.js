@@ -1,3 +1,6 @@
+import retrieveParamsFromCheckout from "./retrieve-params-from-checkout.js"
+import switchTshirtColour from "./switch-tshirt-colour.js"
+
 export default function orderTshirt() {
   const orderForm = document.getElementById("order-form")
   if (orderForm) {
@@ -38,9 +41,13 @@ export default function orderTshirt() {
         JSON.stringify({ quantityValue, sizeValue, colourValue, degrees })
       )
 
-      // Go to checkout.html
+      // Go to checkout.html + params
       const url = "checkout.html?" + params.toString()
       location.href = url
     })
+
+    retrieveParamsFromCheckout()
   }
+
+  switchTshirtColour()
 }
