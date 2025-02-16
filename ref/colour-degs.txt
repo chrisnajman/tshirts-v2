@@ -1,6 +1,0 @@
-Red	315deg
-Brick	360deg
-Violet	270deg
-Blue	180deg
-Green	90deg
-Olive	45deg
